@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+	<html lang="pt-br">
+		<head>
+			<meta charset="utf-8"/>
+			<title>Formulário de cadastro de Notícia</title>
+		</head>
+	<body>
+
+		<h1>Adicionar notícia</h1>
+		<% errors.forEach((error)=>{ %>
+				<h4 style="color:red;">* <%= error.msg %></h4>
+		<% }) %>
+		<form method="post" action="/add/noticia">
+			<input type="text" name="newsTitle" value="<%=fields.newsTitle%>" placeholder="Adicione o título da noticia">
+			<input type="text" name="newsResume" value="<%=fields.newsResume%>" placeholder="Adicione o resumo da noticia">
+			<input type="text" name="newsAuthor" value="<%=fields.newsAuthor%>" placeholder="Adicione o autor da noticia">
+			<input type="date" name="newsDate"  value="<%=fields.newsDate%>" placeholder="Adicione o data da noticia">
+			<textarea name="newsName" cols="30" rows="10">
+				<%=fields.newsName%>
+			</textarea>
+			<button>Enviar</button>
+		</form>
+
+	</body>
+</html>
