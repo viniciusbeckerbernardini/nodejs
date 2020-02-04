@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8"/>
+	<title>Notícias</title>
+</head>
+<body>
+
+	<h1>Notícias</h1>
+
+	<table>
+		<thead>
+			<tr>
+				<td>ID</td>
+				<td>Título</td>
+				<td>Notícia</td>
+			</tr>
+		</thead>
+		<tbody>
+			<% noticias.forEach((noticia, index)=>{ %>
+			<tr>
+				<td><%= noticia.id_noticia %></td>
+				<td><%= noticia.titulo %></td>
+				<td><%= noticia.noticia %></td>
+			</tr>
+			<% }) %>
+		</tbody>
+	</table>
+
+</body>
+</html>
